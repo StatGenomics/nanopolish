@@ -4,6 +4,8 @@
 .*swo
 .*swm
 
+*~
+
 # Generated files
 *.o
 .depend
