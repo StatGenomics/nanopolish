@@ -27,7 +27,7 @@ std::vector<Variant> extract_variants(const std::string& reference,
                                       const std::string& haplotype)
 {
     AlnParam par = aln_param_nt2nt;
-    par.band_width = std::max(20, abs(reference.size() - haplotype.size()) * 2);
+    par.band_width = std::max((int)20, (int)abs(reference.size() - haplotype.size()) * 2);
     AlnAln* aln = aln_stdaln(reference.c_str(), haplotype.c_str(), &par, 1, 1);
     
     // Make aligned strings where gaps are padded with '-'
